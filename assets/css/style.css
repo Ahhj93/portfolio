@@ -1835,6 +1835,17 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: 0;
   }
 
+  /* Increase sidebar width on large desktop screens and reduce main-content width accordingly */
+  .sidebar {
+    width: 30%;
+    min-width: 260px; /* prevent sidebar from becoming too small on very wide layouts */
+  }
+
+  .main-content {
+    min-width: 70%;
+    width: 70%;
+  }
+
 
 
   /**
