@@ -524,6 +524,29 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+/* About banner: keep image proportional and not too tall relative to the about content */
+.about-banner {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-banner .banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* default max height */
+  object-fit: cover;
+}
+
+@media (min-width: 580px) {
+  .about-banner .banner-img { max-height: 220px; }
+}
+
+@media (min-width: 1024px) {
+  .about-banner .banner-img { max-height: 240px; }
+}
+
 
 
 /**
