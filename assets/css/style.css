@@ -532,6 +532,8 @@ main {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 12px;
+  border: 1px solid var(--jet);
+  box-sizing: border-box;
 }
 
 .about-banner .banner-img {
