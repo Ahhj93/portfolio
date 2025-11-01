@@ -28,6 +28,8 @@
     hsl(240, 1%, 25%) 3%, 
     hsl(0, 0%, 19%) 97%
   );
+  /* left-to-right site background gradient: from #0D275A to #070C20 */
+  --bg-gradient-left-right: linear-gradient(to right, #0D275A 0%, #070C20 100%);
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 1%, 18%, 0.251) 0%, 
@@ -173,7 +175,8 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+/* Use the new left->right gradient as the site background; fallback to smoky black if var is missing */
+body { background: var(--bg-gradient-left-right); }
 
 
 
