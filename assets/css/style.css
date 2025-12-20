@@ -357,6 +357,11 @@ main {
   border-radius: 20px;
 }
 
+/* Make the avatar image circular and cover the box */
+.avatar-box img {
+  border-radius: 20px;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
