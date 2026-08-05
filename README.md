@@ -1,5 +1,7 @@
 # Portfolio personnel
 
-## License
+Ce dépôt contient le site et les sources de mon portfolio personnel (projets, CV, compétences et contact).
 
-MIT
+## Licence
+
+MIT — voir le fichier `LICENSE`.
