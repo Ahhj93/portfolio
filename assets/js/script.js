@@ -67,7 +67,7 @@ select.addEventListener("click", function () { elementToggleFunc(this); });
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
+    const selectedValue = normalizeFilterValue(this.dataset.filterValue || this.innerText);
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
@@ -78,11 +78,15 @@ for (let i = 0; i < selectItems.length; i++) {
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
+const normalizeFilterValue = function (value) {
+  return (value || "").toLowerCase().trim();
+};
+
 const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
 
-    if (selectedValue === "tous") {
+    if (selectedValue === "all" || selectedValue === "tous") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
       filterItems[i].classList.add("active");
@@ -101,7 +105,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
   filterBtn[i].addEventListener("click", function () {
 
-    let selectedValue = this.innerText.toLowerCase();
+    const selectedValue = normalizeFilterValue(this.dataset.filterValue || this.innerText);
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
