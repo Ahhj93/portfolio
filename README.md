@@ -1,7 +1,5 @@
-# Portfolio personnel
+# Personal Portfolio
+This repository contains the website and source files for my personal portfolio (projects, resume, skills, and contact information).
 
-Ce dépôt contient le site et les sources de mon portfolio personnel (projets, CV, compétences et contact).
-
-## Licence
-
+## License
 MIT — voir le fichier `LICENSE`.
