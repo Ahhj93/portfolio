@@ -173,10 +173,15 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html {
+  font-family: var(--ff-poppins);
+  background: var(--bg-gradient-left-right);
+}
 
 /* Use the new left->right gradient as the site background; fallback to smoky black if var is missing */
-body { background: var(--bg-gradient-left-right); }
+body {
+  background: var(--bg-gradient-left-right);
+}
 
 
 
@@ -1825,6 +1830,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-track { background: var(--smoky-black); }
 
+  body::-webkit-scrollbar-track-piece {
+    background: var(--smoky-black);
+  }
+
   body::-webkit-scrollbar-thumb {
     border: 5px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
@@ -1835,7 +1844,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
 
-  body::-webkit-scrollbar-button { height: 60px; }
+  body::-webkit-scrollbar-button {
+    height: 60px;
+    background-color: var(--smoky-black);
+  }
 
 
 
